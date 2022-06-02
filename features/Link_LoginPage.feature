@@ -10,9 +10,9 @@ Feature: feature to test login functionality
   
 @SmokeTest
  Scenario: Validate login functionality without user credentials
-  Given User is on Safetychain Login page
+  Given User is on login page
   When User without enters username and password
-  And User clicks on login button
+  And Clicks on login button
   Then validation message should be displayed
 
 @SmokeTest
@@ -31,6 +31,6 @@ Feature: feature to test login functionality
   
 @SmokeTest
  Scenario: Validate passwordhelp link in login page
-  Given User is on Safetychain Login page
+  Given User is on login page
   When User clicks on passwordhelp link
   Then User navigated to the Password Help page

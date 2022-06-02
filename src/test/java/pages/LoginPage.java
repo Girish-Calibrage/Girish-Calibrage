@@ -9,11 +9,11 @@ public class LoginPage extends DriverFactory{
 	Utilities utilities = new Utilities();
 	By txtUsername = By.cssSelector("input#Username");
 	By txtPassword = By.cssSelector("input#Password");
-	By btnLogin = By.cssSelector(".common-button");
+	By btnLogin = By.xpath("//button[@value='login']");
 	By Details = By.xpath("//div[contains(text(),'Details')]");
 	By validationmsg = By.xpath("//span[text()='Please enter username and password']");
-	By incorrectpassword = By.xpath("//span[text()='Incorrect User Name / Password combination. Your account will be locked after 9 more invalid login attempt(s).']");
-	By incorrectusername = By.xpath("//span[text()='Incorrect User Name / Password combination. Please try again.']");
+	By incorrectpasswordmsg = By.xpath("//span[text()='Incorrect User Name / Password combination. Your account will be locked after 9 more invalid login attempt(s).']");
+	By incorrectusernamemsg = By.xpath("//span[text()='Incorrect User Name / Password combination. Please try again.']");
 	By passwordhelp = By.xpath("//a[@class='passwordHelp']");
 	By btnsubmit = By.xpath("//button[text()='SUBMIT']");
 	By contactsupport = By.xpath("//a[text()='Contact Support']");
@@ -83,15 +83,15 @@ public class LoginPage extends DriverFactory{
         	
         }
 	
-	public void incorrectpassword() throws Throwable {
-    	utilities.webDriverWait(driver, incorrectpassword);
-    	driver.findElement(incorrectpassword).click();
+	public void incorrectpasswordmsg() throws Throwable {
+    	utilities.webDriverWait(driver, incorrectpasswordmsg);
+    	driver.findElement(incorrectpasswordmsg).getText();
  
     }
 	
-	public void incorrectusername() throws Throwable {
-    	utilities.webDriverWait(driver, incorrectusername);
-    	driver.findElement(incorrectusername).click();
+	public void incorrectusernamemsg() throws Throwable {
+    	utilities.webDriverWait(driver, incorrectusernamemsg);
+    	driver.findElement(incorrectusernamemsg).getText();
  
     }
 	

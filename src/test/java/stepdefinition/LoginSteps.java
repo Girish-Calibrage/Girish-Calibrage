@@ -21,14 +21,14 @@ public class LoginSteps {
 	}
 	 @When("^User enters invalid username and valid password$")
 	    public void user_enters_invalid_username_and_valid_password() throws Throwable {
-		 loginPage.entervalidUserNameAndinvalidPassword();
-		 loginPage.incorrectusername();
+		 loginPage.enterinvalidUserNameAndvalidPassword();
+		
 	    }
 	 
 	 @When("^User enters valid username and invalid password$")
 	    public void user_enters_valid_username_and_invalid_password() throws Throwable {
-		 loginPage.enterinvalidUserNameAndvalidPassword();
-		 loginPage.incorrectpassword();
+		 loginPage.entervalidUserNameAndinvalidPassword();
+		 
 		 
 	    }
 
@@ -51,11 +51,6 @@ public class LoginSteps {
     public void user_without_enters_username_and_password() throws Throwable {
         
     }
-
-    @And("^User clicks on login button$")
-    public void user_clicks_on_login_button() throws Throwable {
-    	loginPage.clickLoginBtn();
-    }
 	
     @Then("^validation message should be displayed$")
     public void validation_message_should_be_displayed() throws Throwable {
@@ -70,5 +65,15 @@ public class LoginSteps {
     @Then("^User navigated to the Password Help page$")
     public void user_navigated_to_the_password_help_page() throws Throwable {
     	loginPage.passwordhelp();
+    }
+    
+    @Then("^Incorrect User Name validation message should be displayed$")
+    public void incorrect_user_name_validation_message_should_be_displayed() throws Throwable {
+        
+    }
+    
+    @Then("^Incorrect Password validation message should be displayed$")
+    public void incorrect_password_validation_message_should_be_displayed() throws Throwable {
+    	
     }
 }
