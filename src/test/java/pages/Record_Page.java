@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import util.DriverFactory;
 import util.Utilities;
 
-public class RecordPage extends DriverFactory{
+public class Record_Page extends DriverFactory{
 	Utilities utilities = new Utilities();
 	String RecordName = null;
 	String CardViewFirstRecord = null;
